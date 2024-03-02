@@ -3,8 +3,7 @@
 #include <vector>
 #include <string>
 using namespace std;
-void showTasks(const vector<string> &tasks)
-{
+void showTasks(const vector<string> &tasks){
   cout << "To-Do List:" << endl;
   for (int i = 0; i < tasks.size(); ++i)
   {
@@ -12,13 +11,12 @@ void showTasks(const vector<string> &tasks)
   }
 }
 
-int main()
-{
+int main(){
   vector<string> tasks;
   string task;
   char choice;
 
-  // Load existing tasks from file
+
 ifstream inputFile("tasks.txt");
   while (getline(inputFile, task))
   {
@@ -39,7 +37,7 @@ ifstream inputFile("tasks.txt");
       case 'A':
       case 'a':
           cout << "Enter a task: ";
-          cin.ignore(); // Clears the input buffer
+          cin.ignore(); 
           getline(cin, task);
           tasks.push_back(task);
           break;
